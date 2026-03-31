@@ -1,18 +1,16 @@
 ---
 author: Sat Naing
-pubDatetime: 2022-09-23T15:22:00Z
-modDatetime: 2023-12-21T09:12:47.400Z
+pubDatetime: 2026-03-31
+modDatetime: 2026-03-31
 title: Adding new posts in AstroPaper theme
 slug: adding-new-posts-in-astropaper-theme
 featured: true
 draft: false
 tags:
   - docs
-description:
-  Some rules & recommendations for creating or adding new posts using AstroPaper
-  theme.
+description: Some rules & recommendations for creating or adding new posts using
+  AstroPaper theme.
 ---
-
 Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
 
 ## Table of contents
@@ -23,19 +21,21 @@ Frontmatter is the main place to store some important information about the blog
 
 Here is the list of frontmatter property for each post.
 
-| Property           | Description                                                                                 | Remark                                        |
+
+| Property | Description | Remark |
 | ------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| **_title_**        | Title of the post. (h1)                                                                     | required<sup>\*</sup>                         |
-| **_description_**  | Description of the post. Used in post excerpt and site description of the post.             | required<sup>\*</sup>                         |
-| **_pubDatetime_**  | Published datetime in ISO 8601 format.                                                      | required<sup>\*</sup>                         |
-| **_modDatetime_**  | Modified datetime in ISO 8601 format. (only add this property when a blog post is modified) | optional                                      |
-| **_author_**       | Author of the post.                                                                         | default = SITE.author                         |
-| **_slug_**         | Slug for the post. This field is optional but cannot be an empty string. (slug: ""❌)       | default = slugified file name                 |
-| **_featured_**     | Whether or not display this post in featured section of home page                           | default = false                               |
-| **_draft_**        | Mark this post 'unpublished'.                                                               | default = false                               |
-| **_tags_**         | Related keywords for this post. Written in array yaml format.                               | default = others                              |
-| **_ogImage_**      | OG image of the post. Useful for social media sharing and SEO.                              | default = SITE.ogImage or generated OG image  |
-| **_canonicalURL_** | Canonical URL (absolute), in case the article already exists on other source.               | default = `Astro.site` + `Astro.url.pathname` |
+| ***title*** | Title of the post. (h1) | required\* |
+| ***description*** | Description of the post. Used in post excerpt and site description of the post. | required\* |
+| ***pubDatetime*** | Published datetime in ISO 8601 format. | required\* |
+| ***modDatetime*** | Modified datetime in ISO 8601 format. (only add this property when a blog post is modified) | optional |
+| ***author*** | Author of the post. | default = SITE.author |
+| ***slug*** | Slug for the post. This field is optional but cannot be an empty string. (slug: ""❌) | default = slugified file name |
+| ***featured*** | Whether or not display this post in featured section of home page | default = false |
+| ***draft*** | Mark this post 'unpublished'. | default = false |
+| ***tags*** | Related keywords for this post. Written in array yaml format. | default = others |
+| ***ogImage*** | OG image of the post. Useful for social media sharing and SEO. | default = SITE.ogImage or generated OG image |
+| ***canonicalURL*** | Canonical URL (absolute), in case the article already exists on other source. | default = `Astro.site` + `Astro.url.pathname` |
+
 
 > Tip! You can get ISO 8601 datetime by running `new Date().toISOString()` in the console. Make sure you remove quotes though.
 
@@ -43,7 +43,7 @@ Only `title`, `description` and `pubDatetime` fields in frontmatter must be spec
 
 Title and description (excerpt) are important for search engine optimization (SEO) and thus AstroPaper encourages to include these in blog posts.
 
-`slug` is the unique identifier of the url. Thus, `slug` must be unique and different from other posts. The whitespace of `slug` should to be separated with `-` or `_` but `-` is recommended. Slug is automatically generated using the blog post file name. However, you can define your `slug` as a frontmatter in your blog post.
+`slug` is the unique identifier of the url. Thuss, `slug` must be unique and different from other posts. The whitespace of `slug` should to be separated with `-` or `_` but `-` is recommended. Slug is automatically generated using the blog post file name. However, you can define your `slug` as a frontmatter in your blog post.
 
 For example, if the blog file name is `adding-new-post.md` and you don't specify the slug in your frontmatter, Astro will automatically create a slug for the blog post using the file name. Thus, the slug will be `adding-new-post`. But if you specify the `slug` in the frontmatter, this will override the default slug. You can read more about this in [Astro Docs](https://docs.astro.build/en/guides/content-collections/#defining-custom-slugs).
 
@@ -104,7 +104,7 @@ Here are some recommendations, tips & ticks for creating new posts in AstroPaper
 
 ## Headings
 
-There's one thing to note about headings. The AstroPaper blog posts use title (title in the frontmatter) as the main heading of the post. Therefore, the rest of the heading in the post should be using h2 \~ h6.
+There's one thing to note about headings. The AstroPaper blog posts use title (title in the frontmatter) as the main heading of the post. Therefore, the rest of the heading in the post should be using h2  h6.
 
 This rule is not mandatory, but highly recommended for visual, accessibility and SEO purposes.
 
@@ -165,6 +165,7 @@ My recommendation for image compression sites.
 
 ### OG Image
 
-The default OG image will be placed if a post does not specify the OG image. Though not required, OG image related to the post should be specify in the frontmatter. The recommended size for OG image is **_1200 X 640_** px.
+The default OG image will be placed if a post does not specify the OG image. Though not required, OG image related to the post should be specify in the frontmatter. The recommended size for OG image is ***1200 X 640*** px.
 
 > Since AstroPaper v1.4.0, OG images will be generated automatically if not specified. Check out [the announcement](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/).
+
